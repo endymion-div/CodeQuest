@@ -2,13 +2,13 @@ import Database from 'better-sqlite3';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { ACHIEVEMENTS, LEADERBOARD_COMPETITORS, QUESTS } from '../src/data/curriculum';
+import { ACHIEVEMENTS, LEADERBOARD_COMPETITORS, QUESTS } from '../src/data/curriculum.ts';
 import {
   calculateLevelInfo,
   classifyMistake,
   computeAdaptiveDifficulty,
   evaluateNewAchievements,
-} from '../src/utils/progression';
+} from '../src/utils/progression.ts';
 import type {
   DailyTimeBudget,
   DifficultyTier,
@@ -21,7 +21,7 @@ import type {
   SubmissionRecord,
   UserProfile,
   UserStatePayload,
-} from '../src/types/codequest';
+} from '../src/types/codequest.ts';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data');
 if (!fs.existsSync(DATA_DIR)) {

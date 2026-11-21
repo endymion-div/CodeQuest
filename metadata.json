@@ -2,5 +2,7 @@
   "name": "CodeQuest",
   "description": "Code. Solve. Level Up. A futuristic gamified programming learning platform with interactive missions, Monaco coding challenges, boss battles, adaptive difficulty, and AI tutoring.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

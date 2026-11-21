@@ -3,9 +3,8 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import express, { type NextFunction, type Request, type Response } from 'express';
-import { createServer as createViteServer } from 'vite';
-import { ACHIEVEMENTS, BOSS_BATTLES, LESSONS, PROJECT_QUESTS, QUESTS } from './src/data/curriculum';
-import { CHALLENGES } from './src/data/challenges';
+import { ACHIEVEMENTS, BOSS_BATTLES, LESSONS, PROJECT_QUESTS, QUESTS } from './src/data/curriculum.ts';
+import { CHALLENGES } from './src/data/challenges.ts';
 import {
   awardUserXp,
   buildLeaderboard,
@@ -20,18 +19,18 @@ import {
   signSessionToken,
   verifyPassword,
   verifySessionToken,
-} from './server/db';
+} from './server/db.ts';
 import {
   generateAnalyticsInsight,
   generatePersonalizedLearningPlan,
   generateTutorResponse,
-} from './server/gemini';
+} from './server/gemini.ts';
 import type {
   DailyTimeBudget,
   ExperienceLevel,
   LearningGoal,
   ProgrammingLanguage,
-} from './src/types/codequest';
+} from './src/types/codequest.ts';
 
 initDatabase();
 
@@ -84,7 +83,11 @@ function requireAuth(req: AuthedRequest, res: Response, next: NextFunction) {
   next();
 }
 
-// ---------- AUTH ROUTES ----------
+// ---------- HEALTH & AUTH ROUTES ----------
+
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true });
+});
 
 app.get('/api/auth/google-status', (_req, res) => {
   const configured = Boolean(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET);
@@ -776,6 +779,7 @@ async function startServer() {
       res.sendFile(path.join(distDir, 'index.html'));
     });
   } else {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',

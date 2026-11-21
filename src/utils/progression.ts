@@ -3,7 +3,7 @@ import type {
   DifficultyTier,
   MistakeCategory,
   SubmissionRecord,
-} from '../types/codequest';
+} from '../types/codequest.ts';
 
 export interface LevelDefinition {
   level: number;

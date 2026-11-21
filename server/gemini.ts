@@ -1,5 +1,5 @@
 import { GoogleGenAI, Type } from '@google/genai';
-import type { LearningPlanWeek, ProgrammingLanguage } from '../src/types/codequest';
+import type { LearningPlanWeek, ProgrammingLanguage } from '../src/types/codequest.ts';
 
 function getGeminiClient(): GoogleGenAI | null {
   const apiKey = process.env.GEMINI_API_KEY;
