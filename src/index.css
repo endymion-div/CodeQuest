@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.quest-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 211, 238, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Immersive Coding Workspace Ambiences */
+@keyframes auroraDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(24px, -18px, 0) scale(1.06);
+  }
+}
+
+@keyframes auroraDriftReverse {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-26px, 20px, 0) scale(1.08);
+  }
+}
+
+.animate-aurora-slow {
+  animation: auroraDrift 18s ease-in-out infinite;
+}
+
+.animate-aurora-reverse {
+  animation: auroraDriftReverse 22s ease-in-out infinite;
+}
+
+.ambience-nebula {
+  background-color: #060a13;
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(34, 211, 238, 0.14), transparent 42%),
+    radial-gradient(circle at 84% 20%, rgba(99, 102, 241, 0.15), transparent 44%),
+    radial-gradient(circle at 52% 90%, rgba(168, 85, 247, 0.1), transparent 45%),
+    linear-gradient(to right, rgba(34, 211, 238, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 211, 238, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 44px 44px, 44px 44px;
+}
+
+.ambience-matrix {
+  background-color: #050c0a;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(16, 185, 129, 0.16), transparent 44%),
+    radial-gradient(circle at 82% 75%, rgba(20, 184, 166, 0.14), transparent 46%),
+    radial-gradient(circle at 50% 45%, rgba(6, 78, 59, 0.14), transparent 55%),
+    linear-gradient(to right, rgba(16, 185, 129, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.055) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+}
+
+.ambience-synth {
+  background-color: #0b0714;
+  background-image:
+    radial-gradient(circle at 18% 18%, rgba(245, 158, 11, 0.14), transparent 42%),
+    radial-gradient(circle at 82% 24%, rgba(244, 63, 94, 0.13), transparent 45%),
+    radial-gradient(circle at 50% 88%, rgba(139, 92, 246, 0.14), transparent 48%),
+    linear-gradient(to right, rgba(244, 114, 182, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 44px 44px, 44px 44px;
+}
+
+.ambience-obsidian {
+  background-color: #070b14;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(148, 163, 184, 0.08), transparent 48%),
+    radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.1) 1px, transparent 0);
+  background-size: 100% 100%, 28px 28px;
+}
+
+/* Custom sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
