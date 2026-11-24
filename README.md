@@ -7,7 +7,7 @@
 ## Key Features
 
 - **10 Learning Worlds & 52 Interactive Lessons**: Progress from *Programming Foundations* to *Interview Arena* with short concept cards and instant MCQ checks.
-- **32+ Multi-Language Coding Challenges & Daily Challenge**: Built on Monaco Editor supporting JavaScript, Python, Java, C++, and C with live test-case validation.
+- **32+ Multi-Language Coding Challenges & Daily Challenge**: Built on Monaco Editor supporting JavaScript, Python, Java, C++ and C with live test-case validation.
 - **Secure Sandboxed Execution**: Executes JavaScript inside an isolated Web Worker with shadowed network APIs and strict timeout guards, alongside deterministic educational subset transpilers for Python, C, C++, and Java.
 - **AI Coding Tutor (Gemini API)**: Progressive 3-stage hint ladder (`Hint 1 -> Hint 2 -> Hint 3`) that guides learners without revealing full solutions unless explicitly requested.
 - **6 Multi-Stage Boss Battles**: Escalating Easy -> Medium -> Hard coding encounters (e.g., *Robot Army*, *Recursion Hydra*, *Sentinel Gatekeeper*) with live boss HP bars.
