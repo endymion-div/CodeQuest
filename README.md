@@ -14,7 +14,7 @@
 - **1v1 Code Battles & 8 Project Quests**: Real-time competitive pacing duels and multi-checkpoint project builds.
 - **XP, 10-Tier Leveling, Streaks & Achievements**: Earn XP from lessons, challenges, daily streaks, quests, and battles across 10 ranks (`Code Rookie` -> `Code Legend`).
 - **Progress Analytics & Mistake Analyzer**: Recharts visualizations paired with AI-powered insights and categorized mistake tracking.
-- **AI Personalized Learning Plan**: Generates a 5-week custom curriculum tailored to skill level, goal, weekly hours, and target deadline.
+- **AI Personalized Learning Plan**: Generates a 5-week custom curriculum tailored to skill level, goal, weekly hours and target deadline.
 
 ---
 
