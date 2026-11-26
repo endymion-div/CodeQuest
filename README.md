@@ -116,7 +116,7 @@ CodeQuest **never** executes untrusted learner code via `eval()`/`new Function()
 
 1. **JavaScript**: Runs inside an ephemeral `Blob` Web Worker (`src/utils/sandboxRunner.ts`) that shadows `fetch`, `XMLHttpRequest`, `WebSocket`, `importScripts`, and `navigator` inside strict mode, captures console logs, and terminates automatically on a `1500ms` timeout guard.
 2. **Python, C, C++, Java**: Executed through an AST-like deterministic educational transpiler/subset evaluator inside the isolated sandbox before mapping test-case outputs.
-3. **Production Scaling**: For full standard-library execution across Python, Java, C++, and C, route `/api/challenges/execute` to an isolated container runner (e.g., Judge0 CE, Piston, or Firecracker microVMs) with CPU/memory/network cgroups disabled.
+3. **Production Scaling**: For full standard-library execution across Python, Java, C++ and C route `/api/challenges/execute` to an isolated container runner (e.g., Judge0 CE, Piston, or Firecracker microVMs) with CPU/memory/network cgroups disabled.
 
 ---
 
