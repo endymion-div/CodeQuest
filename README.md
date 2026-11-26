@@ -1,6 +1,6 @@
 # CodeQuest — Code. Solve. Level Up.
 
-**CodeQuest** is a gamified programming learning platform that blends interactive coding challenges, progression mechanics (XP, levels, streaks, quests, boss battles) and adaptive AI tutoring into a futuristic coding adventure.
+**CodeQuest** is a gamified programming learning platform that blends interactive coding challenges, progression mechanics (XP, levels, streaks, quests, boss battles) and adaptive AI tutoring into futuristic coding adventure.
 
 ---
 
